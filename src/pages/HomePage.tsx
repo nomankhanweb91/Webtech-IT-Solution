@@ -84,6 +84,18 @@ export const HomePage: React.FC<HomePageProps> = ({
           and AI, with clear primary and secondary CTA buttons.
          ========================================================================= */}
       <section className="relative pt-8 sm:pt-14 overflow-hidden">
+        {/* High-Impact Hero Background Image with Subtle Dark Overlay */}
+        <div className="absolute inset-0 -z-20 overflow-hidden pointer-events-none select-none">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80"
+            alt="Futuristic cyber tech background"
+            className="w-full h-full object-cover object-center opacity-10 mix-blend-luminosity scale-105"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/85 to-slate-950" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-transparent to-slate-950" />
+        </div>
+
         {/* Atmospheric Tech Background Grid & Gradient Mesh */}
         <TechIllustration type="hero-bg" />
 
