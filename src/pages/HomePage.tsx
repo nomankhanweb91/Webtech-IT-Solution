@@ -30,6 +30,8 @@ import { portfolioProjects } from '../data/portfolioData';
 import { industriesData } from '../data/industriesData';
 import { testimonialsData } from '../data/testimonialsData';
 import { TechIllustration } from '../components/TechIllustration';
+import { WebAndAppShowcaseSlider } from '../components/WebAndAppShowcaseSlider';
+import { ImageWithFallback } from '../components/ImageWithFallback';
 import { getWhatsAppUrl, getPhoneUrl, COMPANY_FOUNDER, COMPANY_FOUNDED, COMPANY_PHONE, COMPANY_WHATSAPP } from '../utils/whatsapp';
 
 interface HomePageProps {
@@ -82,6 +84,9 @@ export const HomePage: React.FC<HomePageProps> = ({
           and AI, with clear primary and secondary CTA buttons.
          ========================================================================= */}
       <section className="relative pt-8 sm:pt-14 overflow-hidden">
+        {/* Atmospheric Tech Background Grid & Gradient Mesh */}
+        <TechIllustration type="hero-bg" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -89,13 +94,12 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Left Column: Value Proposition & CTAs */}
             <div className="lg:col-span-7 space-y-6">
               
-              {/* Trust Subtitle / Kicker */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono">
-                <span>EST. 2023</span>
+              {/* Value Kicker */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>PREMIER IT SERVICES &amp; SOFTWARE AGENCY</span>
                 <span aria-hidden="true">·</span>
-                <span>ROHINI, DELHI</span>
-                <span aria-hidden="true">·</span>
-                <span>FOUNDER NOMAN KHAN</span>
+                <span>DIRECT FOUNDER SUPERVISION</span>
               </div>
 
               {/* Headline */}
@@ -148,9 +152,9 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
 
-            {/* Right Column: Hero Visual Terminal Graphic */}
+            {/* Right Column: Web & App Development Sliding Showcase */}
             <div className="lg:col-span-5">
-              <TechIllustration type="hero" />
+              <WebAndAppShowcaseSlider />
             </div>
           </div>
 
@@ -207,52 +211,68 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div
               key={service.id}
               onClick={() => onNavigate(`/services/${service.slug}`)}
-              className="bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700/80 rounded-2xl p-6 transition-all duration-200 cursor-pointer flex flex-col justify-between group shadow-sm hover:shadow-xl hover:-translate-y-1"
+              className="bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700/80 rounded-2xl p-5 transition-all duration-200 cursor-pointer flex flex-col justify-between group shadow-sm hover:shadow-xl hover:-translate-y-1"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    {getServiceIcon(service.iconName)}
+                {/* Real High-Res Service Thumbnail Image */}
+                <div className="mb-4 relative h-40 rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
+                  <ImageWithFallback
+                    src={service.imageUrl}
+                    alt={service.title}
+                    containerClassName="w-full h-full"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 brightness-[0.88]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                  <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-slate-950/85 backdrop-blur-md border border-slate-700/60 text-[10px] font-mono text-cyan-400">
+                    {service.techStack[0]}
                   </div>
-                  <span className="text-[11px] font-mono text-slate-400">
-                    0{index + 1}
-                  </span>
+                </div>
+
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center">
+                      {getServiceIcon(service.iconName)}
+                    </div>
+                    <span className="text-xs font-mono text-slate-400">0{index + 1}</span>
+                  </div>
+                  <span className="text-[11px] font-mono text-cyan-400">{service.techStack[0]}</span>
                 </div>
 
                 <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">
                   {service.tagline}
                 </p>
 
-                <div className="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5">
-                  <p className="text-[11px] font-mono uppercase text-slate-400">Key Deliverables:</p>
+                <div className="mt-3 pt-3 border-t border-slate-800/80 space-y-1">
+                  <p className="text-[10px] font-mono uppercase text-slate-400">Deliverables:</p>
                   <ul className="space-y-1">
-                    {service.deliverables.slice(0, 3).map((d, i) => (
-                      <li key={i} className="text-xs text-slate-400 flex items-center gap-2">
-                        <span className="w-1 h-1 rounded-full bg-blue-400" />
-                        <span>{d}</span>
+                    {service.deliverables.slice(0, 2).map((d, i) => (
+                      <li key={i} className="text-xs text-slate-400 flex items-center gap-1.5 truncate">
+                        <span className="w-1 h-1 rounded-full bg-blue-400 shrink-0" />
+                        <span className="truncate">{d}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <div className="mt-5 pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
                 <span className="text-blue-400 font-semibold group-hover:underline flex items-center gap-1">
                   <span>Explore Architecture</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <span className="text-[11px] font-mono text-slate-400">
-                  {service.techStack[0]}
+                <span className="text-[11px] font-mono text-slate-500">
+                  {service.features.length} Modules
                 </span>
               </div>
             </div>
           ))}
         </div>
       </section>
+
 
       {/* =========================================================================
           SECTION 3: SHORT ABOUT SECTION
@@ -393,9 +413,24 @@ export const HomePage: React.FC<HomePageProps> = ({
               className="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between group hover:border-slate-700 transition-all shadow-sm hover:shadow-xl hover:-translate-y-1"
             >
               <div>
-                {/* Visual Graphic Mockup */}
-                <div className="mb-4">
-                  <TechIllustration type={proj.id as any} title={proj.title} />
+                {/* Real Case Study High-Res Showcase Image */}
+                <div className="mb-4 relative h-48 rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
+                  <ImageWithFallback
+                    src={proj.imageUrl}
+                    alt={proj.title}
+                    containerClassName="w-full h-full"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 brightness-[0.88]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                  
+                  {/* Status & Year Badges */}
+                  <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-950/85 backdrop-blur-md border border-slate-700/60 text-[10px] font-mono text-emerald-400">
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>Live Case Study</span>
+                  </div>
+                  <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-slate-950/80 backdrop-blur-md border border-slate-700/50 text-[10px] font-mono text-slate-300">
+                    {proj.year}
+                  </div>
                 </div>
 
                 <div className="flex items-center justify-between mb-1">
@@ -541,10 +576,23 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div
               key={ind.id}
               onClick={() => onNavigate(`/industries/${ind.slug}`)}
-              className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 hover:bg-slate-900 transition-all cursor-pointer group flex flex-col justify-between"
+              className="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 hover:bg-slate-900 transition-all cursor-pointer group flex flex-col justify-between"
             >
               <div>
-                <span className="text-[10px] font-mono text-blue-400 uppercase">{ind.category}</span>
+                {/* Real High-Res Industry Thumbnail Image */}
+                <div className="relative h-28 w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                  <ImageWithFallback
+                    src={ind.imageUrl}
+                    alt={ind.name}
+                    containerClassName="w-full h-full"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 brightness-[0.85]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                  <span className="absolute bottom-2 left-2 text-[9px] font-mono text-cyan-300 px-1.5 py-0.5 rounded bg-slate-950/85 backdrop-blur-md border border-slate-700/60">
+                    {ind.category}
+                  </span>
+                </div>
+
                 <h3 className="text-sm font-bold text-white group-hover:text-blue-400 transition-colors mt-1">
                   {ind.name}
                 </h3>

@@ -11,6 +11,8 @@ import {
   Zap,
 } from 'lucide-react';
 import { productsData } from '../data/productsData';
+import { TechIllustration } from '../components/TechIllustration';
+import { ImageWithFallback } from '../components/ImageWithFallback';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
 interface ProductsIndexProps {
@@ -53,11 +55,25 @@ export const ProductsIndexPage: React.FC<ProductsIndexProps> = ({
           <div
             key={prod.id}
             onClick={() => onNavigate(`/products/${prod.slug}`)}
-            className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 hover:bg-slate-900 transition-all cursor-pointer flex flex-col justify-between group shadow-sm hover:shadow-xl hover:-translate-y-1"
+            className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 hover:bg-slate-900 transition-all cursor-pointer flex flex-col justify-between group shadow-sm hover:shadow-xl hover:-translate-y-1"
           >
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center group-hover:scale-110 transition-transform">
+              {/* Real Product Thumbnail Image */}
+              <div className="mb-4 relative h-40 rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
+                <ImageWithFallback
+                  src={prod.imageUrl}
+                  alt={prod.title}
+                  containerClassName="w-full h-full"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 brightness-[0.88]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-slate-950/85 backdrop-blur-md border border-slate-700/60 text-[10px] font-mono text-cyan-400">
+                  {prod.category}
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mb-2">
+                <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center">
                   {getProductIcon(prod.iconName)}
                 </div>
                 <span className="text-[11px] font-mono text-cyan-400">{prod.category}</span>

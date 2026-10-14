@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import { ProductItem } from '../types';
 import { productsData } from '../data/productsData';
+import { TechIllustration } from '../components/TechIllustration';
+import { ImageWithFallback } from '../components/ImageWithFallback';
 import { getWhatsAppUrl, getPhoneUrl, COMPANY_PHONE, COMPANY_WHATSAPP } from '../utils/whatsapp';
 
 interface ProductDetailProps {
@@ -45,49 +47,87 @@ export const ProductDetailPage: React.FC<ProductDetailProps> = ({
 
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950/40 border border-slate-800 rounded-3xl p-8 sm:p-12 space-y-6">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-              {product.category}
-            </span>
-            <span className="px-3 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono">
-              READY FOR DEPLOYMENT
-            </span>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-7 space-y-4">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-3 py-1 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
+                  {product.category}
+                </span>
+                <span className="px-3 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono">
+                  READY FOR DEPLOYMENT
+                </span>
+              </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            {product.title}
-          </h1>
+              <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                {product.title}
+              </h1>
 
-          <p className="text-lg sm:text-xl text-blue-300 font-medium">
-            {product.tagline}
-          </p>
+              <p className="text-base sm:text-lg text-blue-300 font-medium">
+                {product.tagline}
+              </p>
 
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl">
-            {product.shortDesc}
-          </p>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
+                {product.shortDesc}
+              </p>
 
-          <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-300 flex items-center gap-3">
-            <span className="font-mono text-cyan-400 font-bold uppercase tracking-wider">Target Audience:</span>
-            <span>{product.targetAudience}</span>
-          </div>
+              <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-300 flex items-center gap-3">
+                <span className="font-mono text-cyan-400 font-bold uppercase tracking-wider">Target:</span>
+                <span className="truncate">{product.targetAudience}</span>
+              </div>
 
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a
-              href={getWhatsAppUrl(`Hello Noman Khan, I would like to request a live demo and pricing for ${product.title}.`)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-950"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Request Live Demo on WhatsApp (9594319442)</span>
-            </a>
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href={getWhatsAppUrl(`Hello Noman Khan, I would like to request a live demo and pricing for ${product.title}.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-950"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>Request Live Demo (WhatsApp)</span>
+                </a>
 
-            <button
-              onClick={() => onOpenConsultationModal(product.title)}
-              className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-blue-600/30"
-            >
-              Inquire License &amp; White-Label
-            </button>
+                <button
+                  onClick={() => onOpenConsultationModal(product.title)}
+                  className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-blue-600/30"
+                >
+                  Inquire License
+                </button>
+              </div>
+            </div>
+
+            {/* Visual Showcase Image for Product */}
+            <div className="lg:col-span-5">
+              <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl group">
+                <ImageWithFallback
+                  src={product.imageUrl}
+                  alt={product.title}
+                  containerClassName="w-full h-full"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-[0.88]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                
+                {/* Product Status Badges */}
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+                  <span className="px-2.5 py-1 rounded-md bg-slate-950/85 backdrop-blur-md border border-slate-700/70 text-[11px] font-mono text-cyan-400">
+                    {product.category}
+                  </span>
+                  <span className="px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md border border-slate-700/60 text-[10px] font-mono text-emerald-400 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> Turnkey Ready
+                  </span>
+                </div>
+
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10">
+                  <span className="text-xs font-semibold text-white drop-shadow">
+                    Proprietary Software Suite
+                  </span>
+                  <span className="text-[10px] font-mono text-slate-300 bg-slate-900/80 backdrop-blur-md px-2 py-0.5 rounded">
+                    Full IP Handover
+                  </span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

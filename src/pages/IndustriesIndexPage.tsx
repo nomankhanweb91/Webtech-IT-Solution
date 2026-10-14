@@ -10,6 +10,7 @@ import {
   MessageCircle,
 } from 'lucide-react';
 import { industriesData } from '../data/industriesData';
+import { ImageWithFallback } from '../components/ImageWithFallback';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
 interface IndustriesIndexProps {
@@ -96,9 +97,21 @@ export const IndustriesIndexPage: React.FC<IndustriesIndexProps> = ({
             className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 hover:bg-slate-900 transition-all cursor-pointer flex flex-col justify-between group shadow-sm hover:shadow-xl hover:-translate-y-1"
           >
             <div>
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] font-mono text-cyan-400 uppercase tracking-wider">{ind.category}</span>
-                <span className="text-[10px] font-mono text-slate-400">{ind.keyModules.length} Modules</span>
+              {/* Real Industry Thumbnail Image */}
+              <div className="mb-4 relative h-36 rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
+                <ImageWithFallback
+                  src={ind.imageUrl}
+                  alt={ind.name}
+                  containerClassName="w-full h-full"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 brightness-[0.88]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-slate-950/85 backdrop-blur-md border border-slate-700/60 text-[10px] font-mono text-cyan-400">
+                  {ind.category}
+                </div>
+                <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-slate-950/80 backdrop-blur-md border border-slate-700/50 text-[10px] font-mono text-slate-300">
+                  {ind.keyModules.length} Modules
+                </div>
               </div>
 
               <h2 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">

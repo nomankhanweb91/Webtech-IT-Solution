@@ -12,6 +12,7 @@ import {
   MapPin,
   Calendar,
 } from 'lucide-react';
+import { ImageWithFallback } from '../components/ImageWithFallback';
 import {
   COMPANY_FOUNDER,
   COMPANY_FOUNDED,
@@ -87,10 +88,25 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onOpenConsultationModa
             </div>
           </div>
 
-          <div className="lg:col-span-4 bg-slate-950/80 rounded-2xl p-6 border border-slate-800 space-y-3 font-mono text-xs text-slate-300">
-            <div className="text-blue-400 font-bold border-b border-slate-800 pb-2">
-              // Agency Quick Facts
+          <div className="lg:col-span-4 space-y-4">
+            <div className="relative h-44 rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-lg">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+                alt="Webtech IT Solution Team & Engineering Desk"
+                containerClassName="w-full h-full"
+                className="w-full h-full object-cover object-center brightness-90"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+              <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono text-cyan-300 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-slate-800">
+                <span>Rohini, Delhi Office</span>
+                <span className="text-emerald-400">Active Engineering</span>
+              </div>
             </div>
+
+            <div className="bg-slate-950/80 rounded-2xl p-5 border border-slate-800 space-y-3 font-mono text-xs text-slate-300">
+              <div className="text-blue-400 font-bold border-b border-slate-800 pb-2">
+                // Agency Quick Facts
+              </div>
             <div className="flex justify-between py-1 border-b border-slate-900">
               <span className="text-slate-400">Founder:</span>
               <span className="text-white">{COMPANY_FOUNDER}</span>
@@ -116,9 +132,10 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onOpenConsultationModa
               <span className="text-emerald-400">{COMPANY_WHATSAPP}</span>
             </div>
           </div>
-
         </div>
+
       </div>
+    </div>
 
       {/* Core Engineering Values */}
       <div className="space-y-6">

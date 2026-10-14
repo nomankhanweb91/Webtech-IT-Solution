@@ -8,6 +8,7 @@ export const portfolioProjects: ProjectItem[] = [
     category: 'Commercial Signage & Branding Enterprise',
     clientLocation: 'Mumbai, Maharashtra',
     year: '2024',
+    imageUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
     description: 'Complete digital branding portal, bespoke architectural signage catalog, RFQ quoting engine, and high-performance corporate showcase built for Mumbai’s premier outdoor signage manufacturer.',
     techStack: ['Next.js', 'React', 'Tailwind CSS', 'Node.js', 'Figma'],
     results: [
@@ -23,6 +24,7 @@ export const portfolioProjects: ProjectItem[] = [
     category: 'Luxury Interior Design & Architecture Studio',
     clientLocation: 'Mumbai, India',
     year: '2024',
+    imageUrl: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
     description: 'Editorial-grade visual portfolio showcasing high-end residential and commercial interior architectural projects, with smooth transitions, 3D project walk-throughs, and consultation booking.',
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite'],
     results: [
@@ -38,6 +40,7 @@ export const portfolioProjects: ProjectItem[] = [
     category: 'Animal Welfare & Healthcare Non-Profit',
     clientLocation: 'India',
     year: '2023',
+    imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1200&q=80',
     description: 'High-speed mission-critical humanitarian platform with emergency ambulance rescue dispatch, online donor collection with instant 80G tax receipts, and volunteer coordination modules.',
     techStack: ['Next.js', 'PostgreSQL', 'Razorpay', 'Tailwind CSS', 'WhatsApp Cloud API'],
     results: [
@@ -53,6 +56,7 @@ export const portfolioProjects: ProjectItem[] = [
     category: 'Cultural Tourism & Heritage Travel Portal',
     clientLocation: 'Pan-India',
     year: '2024',
+    imageUrl: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
     description: 'Comprehensive travel & cultural exploration guide platform featuring multi-lingual state itineraries, heritage monument ticketing details, and custom vacation package planners.',
     techStack: ['React', 'Next.js', 'Tailwind CSS', 'Node.js', 'Google Maps API'],
     results: [
@@ -68,6 +72,7 @@ export const portfolioProjects: ProjectItem[] = [
     category: 'Cryptocurrency & Digital Asset Trading Platform',
     clientLocation: 'Global',
     year: '2024',
+    imageUrl: 'https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=1200&q=80',
     description: 'High-throughput crypto algorithmic trading portal with real-time candlestick charts, order book depth streams, automated trade signals, and military-grade wallet security.',
     techStack: ['React', 'TypeScript', 'WebSockets', 'Tailwind CSS', 'Chart.js', 'FastAPI'],
     results: [

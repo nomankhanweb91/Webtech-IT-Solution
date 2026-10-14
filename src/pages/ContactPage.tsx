@@ -21,6 +21,7 @@ import {
   getWhatsAppUrl,
   getPhoneUrl,
 } from '../utils/whatsapp';
+import { ImageWithFallback } from '../components/ImageWithFallback';
 
 export const ContactPage: React.FC = () => {
   const [name, setName] = useState('');
@@ -218,6 +219,24 @@ _Sent from Contact Page on webtechitsolution.com_`;
         {/* Right Column: Direct Info & Physical Map Placeholder */}
         <div className="lg:col-span-5 space-y-6">
           
+          {/* Office & Consultation Image Card */}
+          <div className="relative h-48 rounded-3xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl group">
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+              alt="Webtech IT Solution Headquarters Rohini Delhi"
+              containerClassName="w-full h-full"
+              className="w-full h-full object-cover object-center brightness-90 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+            <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/85 backdrop-blur-md border border-slate-700/70 text-[10px] font-mono text-cyan-400">
+              Rohini, Delhi Desk
+            </div>
+            <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-mono text-white bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-xl border border-slate-800">
+              <span>Direct Founder Consulting</span>
+              <span className="text-emerald-400">9594319442</span>
+            </div>
+          </div>
+
           {/* Quick Direct Contacts */}
           <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-5">
             <h3 className="text-lg font-bold text-white tracking-tight">

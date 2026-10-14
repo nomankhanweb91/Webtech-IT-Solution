@@ -5,6 +5,7 @@ export interface ServiceItem {
   shortDesc: string;
   tagline: string;
   iconName: string;
+  imageUrl: string;
   deliverables: string[];
   techStack: string[];
   features: { title: string; description: string }[];
@@ -19,6 +20,7 @@ export interface ProductItem {
   tagline: string;
   category: string;
   iconName: string;
+  imageUrl: string;
   keyFeatures: string[];
   highlights: { title: string; detail: string }[];
   targetAudience: string;
@@ -30,6 +32,7 @@ export interface IndustryItem {
   name: string;
   category: 'Business & Tech' | 'Commerce & Mobility' | 'Media & Lifestyle' | 'Health & Public Sector';
   iconName: string;
+  imageUrl: string;
   summary: string;
   challenges: string[];
   solutions: string[];
@@ -44,6 +47,7 @@ export interface ProjectItem {
   category: string;
   clientLocation: string;
   year: string;
+  imageUrl: string;
   description: string;
   techStack: string[];
   results: string[];

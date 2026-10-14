@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { portfolioProjects } from '../data/portfolioData';
 import { TechIllustration } from '../components/TechIllustration';
+import { ImageWithFallback } from '../components/ImageWithFallback';
 import { getWhatsAppUrl, getPhoneUrl, COMPANY_PHONE } from '../utils/whatsapp';
 
 interface OurWorkPageProps {
@@ -39,9 +40,38 @@ export const OurWorkPage: React.FC<OurWorkPageProps> = ({ onOpenConsultationModa
             key={proj.id}
             className="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
           >
-            {/* Visual Column */}
+            {/* Visual Column: Real High-Res Project Showcase Image */}
             <div className="lg:col-span-5">
-              <TechIllustration type={proj.id as any} title={proj.title} />
+              <div className="relative h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl group">
+                <ImageWithFallback
+                  src={proj.imageUrl}
+                  alt={proj.title}
+                  containerClassName="w-full h-full"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-[0.88]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                
+                {/* Top Badge: Verified Project & Client Location */}
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+                  <span className="px-2.5 py-1 rounded-md bg-slate-950/85 backdrop-blur-md border border-slate-700/70 text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>Verified Production</span>
+                  </span>
+                  <span className="px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md border border-slate-700/60 text-[10px] font-mono text-slate-300">
+                    {proj.clientLocation}
+                  </span>
+                </div>
+
+                {/* Bottom live indicator */}
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10">
+                  <span className="text-xs font-mono text-cyan-400 bg-slate-950/80 backdrop-blur-md px-2 py-0.5 rounded border border-slate-800">
+                    {proj.url.replace('https://', '').replace('/', '')}
+                  </span>
+                  <span className="text-[10px] font-mono text-slate-300 bg-slate-900/80 backdrop-blur-md px-2 py-0.5 rounded">
+                    {proj.year}
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Content Column */}
