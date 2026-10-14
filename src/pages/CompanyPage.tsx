@@ -41,7 +41,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onOpenConsultationModa
           Engineering High-Performance Software From Delhi to the World
         </h1>
         <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-          Founded in {COMPANY_FOUNDED} by <strong>{COMPANY_FOUNDER}</strong>, Webtech IT Solution is a boutique software engineering and digital transformation agency focused on speed, clean architecture, and conversion.
+          Established in {COMPANY_FOUNDED}, <strong>Webtech IT Solution</strong> is a boutique software engineering and digital transformation agency focused on speed, clean architecture, and conversion.
         </p>
       </div>
 
@@ -56,11 +56,11 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onOpenConsultationModa
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-              A Personal Note from Founder Noman Khan
+              A Personal Note from Webtech IT Solution Leadership
             </h2>
 
             <p className="text-sm text-slate-300 leading-relaxed">
-              &ldquo;I started Webtech IT Solution in 2023 with a clear conviction: most software development agencies take months to deliver bloated, slow websites that don’t actually generate business for their owners. We operate on opposite principles. Every line of TypeScript is written with precision, every layout is tested for sub-second mobile load times, and our clients have direct WhatsApp access to me at all times.&rdquo;
+              &ldquo;We established Webtech IT Solution in 2023 with a clear conviction: most software development agencies take months to deliver bloated, slow websites that don’t actually generate business for their owners. We operate on opposite principles. Every line of TypeScript is written with precision, every layout is tested for sub-second mobile load times, and our clients have direct WhatsApp access to our technical team at all times.&rdquo;
             </p>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
@@ -69,13 +69,13 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onOpenConsultationModa
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <a
-                href={getWhatsAppUrl('Hi Noman Khan, I would like to schedule a direct founder consultation.')}
+                href={getWhatsAppUrl('Hi Webtech IT Solution, I would like to schedule a direct consultation.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-colors shadow-lg shadow-emerald-950"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Chat Directly with Noman Khan (9594319442)</span>
+                <span>Chat Directly with Webtech IT Solution (9594319442)</span>
               </a>
 
               <a

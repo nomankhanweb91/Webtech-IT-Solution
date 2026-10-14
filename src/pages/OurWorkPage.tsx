@@ -131,7 +131,7 @@ export const OurWorkPage: React.FC<OurWorkPageProps> = ({ onOpenConsultationModa
                 </a>
 
                 <a
-                  href={getWhatsAppUrl(`Hi Noman Khan, I reviewed your work on ${proj.title} (${proj.url}) and want to build a similar solution.`)}
+                  href={getWhatsAppUrl(`Hi Webtech IT Solution, I reviewed your work on ${proj.title} (${proj.url}) and want to build a similar solution.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-colors shadow-md shadow-emerald-950"
@@ -151,7 +151,7 @@ export const OurWorkPage: React.FC<OurWorkPageProps> = ({ onOpenConsultationModa
           Want your company featured in our next marquee launch?
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto">
-          Contact founder Noman Khan directly to review your technical specs and begin architectural sprint planning.
+          Contact Webtech IT Solution directly to review your technical specs and begin architectural sprint planning.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <button
@@ -161,7 +161,7 @@ export const OurWorkPage: React.FC<OurWorkPageProps> = ({ onOpenConsultationModa
             Start Your Project Consultation
           </button>
           <a
-            href={getWhatsAppUrl('Hi Noman Khan, I would like to schedule a call about my project.')}
+            href={getWhatsAppUrl('Hi Webtech IT Solution, I would like to schedule a call about my project.')}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-emerald-950"

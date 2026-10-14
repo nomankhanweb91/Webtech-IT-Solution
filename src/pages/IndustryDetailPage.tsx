@@ -66,7 +66,7 @@ export const IndustryDetailPage: React.FC<IndustryDetailProps> = ({
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <a
-                  href={getWhatsAppUrl(`Hello Noman Khan, I am looking for custom software and IT development for the ${industry.name} industry.`)}
+                  href={getWhatsAppUrl(`Hello Webtech IT Solution, I am looking for custom software and IT development for the ${industry.name} industry.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-950"
@@ -209,14 +209,14 @@ export const IndustryDetailPage: React.FC<IndustryDetailProps> = ({
       {/* Conversion Banner */}
       <div className="bg-gradient-to-r from-blue-900/30 via-slate-900 to-indigo-900/30 border border-blue-800/40 rounded-3xl p-8 sm:p-12 text-center space-y-4">
         <h3 className="text-2xl font-bold text-white tracking-tight">
-          Plan Your {industry.name} Application with Founder Noman Khan
+          Plan Your {industry.name} Application with Webtech IT Solution
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
           From compliant regulatory protocols to high-concurrency cloud scaling, we build production software that drives business growth.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <a
-            href={getWhatsAppUrl(`Hi Noman Khan, I would like to schedule a call regarding ${industry.name} software development.`)}
+            href={getWhatsAppUrl(`Hi Webtech IT Solution, I would like to schedule a call regarding ${industry.name} software development.`)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-emerald-950"

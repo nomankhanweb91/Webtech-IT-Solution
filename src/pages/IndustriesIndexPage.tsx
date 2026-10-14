@@ -152,10 +152,10 @@ export const IndustriesIndexPage: React.FC<IndustriesIndexProps> = ({
           Don&apos;t see your specific sector listed?
         </h3>
         <p className="text-xs sm:text-sm text-slate-400 max-w-md mx-auto">
-          We engineer bespoke applications for niche and emerging domains. Discuss your requirements directly with founder Noman Khan.
+          We engineer bespoke applications for niche and emerging domains. Discuss your requirements directly with Webtech IT Solution.
         </p>
         <a
-          href={getWhatsAppUrl('Hi Noman Khan, I would like to inquire about software development for my industry.')}
+          href={getWhatsAppUrl('Hi Webtech IT Solution, I would like to inquire about software development for my industry.')}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-lg shadow-emerald-950 transition-colors"

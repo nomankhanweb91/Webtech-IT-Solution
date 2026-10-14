@@ -20,7 +20,7 @@ export const FloatingCTABar: React.FC<FloatingCTAProps> = ({ onOpenConsultationM
         </a>
 
         <a
-          href={getWhatsAppUrl('Hi Noman Khan, I am interested in discussing a project for my company.')}
+          href={getWhatsAppUrl('Hi Webtech IT Solution, I am interested in discussing a project for my company.')}
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-emerald-600 text-white text-xs font-semibold shadow-lg shadow-emerald-950 active:scale-95 transition-transform"

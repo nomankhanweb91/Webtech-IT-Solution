@@ -432,7 +432,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <span>Call 7977117717</span>
               </a>
               <a
-                href={getWhatsAppUrl('Hi Noman Khan, I would like to discuss an IT development project.')}
+                href={getWhatsAppUrl('Hi Webtech IT Solution, I would like to discuss an IT development project.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 p-3 bg-emerald-600/15 border border-emerald-500/30 rounded-xl text-xs font-bold text-emerald-400 active:bg-emerald-600/25"
@@ -601,7 +601,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onClick={() => handleMobileNavigate('/company')}
                 className="w-full text-left p-4 rounded-2xl border border-slate-800 bg-slate-900/60 text-sm font-bold text-white hover:bg-slate-900 transition-colors flex items-center justify-between"
               >
-                <span>Company &amp; Founder (Noman Khan)</span>
+                <span>About Webtech IT Solution</span>
                 <span className="text-xs text-blue-400 font-mono">Rohini Delhi →</span>
               </button>
 

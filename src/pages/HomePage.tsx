@@ -145,7 +145,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               {/* WhatsApp direct trust indicator */}
               <div className="flex flex-wrap items-center gap-4 pt-2 text-xs text-slate-400">
                 <a
-                  href={getWhatsAppUrl('Hi Noman Khan, I would like to explore custom IT development with Webtech IT Solution.')}
+                  href={getWhatsAppUrl('Hi Webtech IT Solution, I would like to explore custom IT development.')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
@@ -206,7 +206,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               End-to-End Technology Services Built to Scale
             </h2>
             <p className="text-sm text-slate-400 mt-2 max-w-xl">
-              We replace fragmented freelancers with a disciplined engineering team overseen directly by founder Noman Khan.
+              We replace fragmented freelancers with a disciplined engineering team at Webtech IT Solution.
             </p>
           </div>
           <button
@@ -288,7 +288,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* =========================================================================
           SECTION 3: SHORT ABOUT SECTION
-          Brief company introduction highlighting founder Noman Khan, establishment
+          Brief company introduction highlighting Webtech IT Solution, establishment
           year (2023), and commitment to excellence.
          ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -302,7 +302,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
 
               <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                Engineered for Performance by Noman Khan Since 2023.
+                Engineered for Performance by Webtech IT Solution Since 2023.
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
@@ -310,7 +310,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               </p>
 
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Under the technical stewardship of founder <strong>Noman Khan</strong>, we combine deep computer science fundamentals with cutting-edge front-end design, secure backend architectures, and direct client communication. When you build with us, you speak directly with technical architects, not junior account managers.
+                Under the technical stewardship of <strong>Webtech IT Solution</strong>, we combine deep computer science fundamentals with cutting-edge front-end design, secure backend architectures, and direct client communication. When you build with us, you speak directly with technical architects, not junior account managers.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-slate-300">
@@ -329,16 +329,16 @@ export const HomePage: React.FC<HomePageProps> = ({
                   onClick={() => onNavigate('/company')}
                   className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold border border-slate-700 transition-colors"
                 >
-                  Read Founder Story &amp; Vision
+                  Read Story &amp; Vision
                 </button>
                 <a
-                  href={getWhatsAppUrl('Hi Noman Khan, I would like to schedule a quick 15-minute consultation.')}
+                  href={getWhatsAppUrl('Hi Webtech IT Solution, I would like to schedule a quick 15-minute consultation.')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-emerald-400 hover:underline flex items-center gap-1 font-semibold"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Chat With Founder on WhatsApp</span>
+                  <span>Chat on WhatsApp</span>
                 </a>
               </div>
             </div>
@@ -346,8 +346,8 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="lg:col-span-5 bg-slate-950/80 rounded-2xl p-6 border border-slate-800 space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                 <div>
-                  <h4 className="text-sm font-bold text-white">Noman Khan</h4>
-                  <p className="text-xs text-slate-400">Founder &amp; Principal Software Engineer</p>
+                  <h4 className="text-sm font-bold text-white">Webtech IT Solution</h4>
+                  <p className="text-xs text-slate-400">Premier IT &amp; Software Engineering Team</p>
                 </div>
                 <div className="px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 font-mono text-[11px] border border-blue-500/20">
                   Est. 2023
@@ -482,7 +482,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </a>
 
                 <a
-                  href={getWhatsAppUrl(`Hi Noman Khan, I saw your client project "${proj.title}" and would like to build something similar.`)}
+                  href={getWhatsAppUrl(`Hi Webtech IT Solution, I saw your client project "${proj.title}" and would like to build something similar.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-emerald-400 hover:text-emerald-300 flex items-center gap-1"
@@ -724,7 +724,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             Have a project in mind? Let&apos;s build it right the first time.
           </h3>
           <p className="text-sm text-slate-300 max-w-xl mx-auto">
-            Get in touch with founder Noman Khan today for an honest architectural evaluation, realistic milestone roadmap, and competitive pricing.
+            Get in touch with Webtech IT Solution today for an honest architectural evaluation, realistic milestone roadmap, and competitive pricing.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
@@ -734,7 +734,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               Request Free Consultation
             </button>
             <a
-              href={getWhatsAppUrl('Hi Noman Khan, I am ready to discuss my new IT project.')}
+              href={getWhatsAppUrl('Hi Webtech IT Solution, I am ready to discuss my new IT project.')}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-900/40 flex items-center gap-2"

@@ -43,12 +43,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Ready to engineer your next high-converting digital product?
             </h3>
             <p className="text-slate-400 text-xs sm:text-sm mt-1">
-              Speak directly with founder Noman Khan for project scoping, timeline, and exact quotation.
+              Speak directly with Webtech IT Solution for project scoping, timeline, and exact quotation.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a
-              href={getWhatsAppUrl('Hello Noman Khan, I want to discuss a new software project for my business.')}
+              href={getWhatsAppUrl('Hello Webtech IT Solution, I want to discuss a new software project for my business.')}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-colors shadow-lg shadow-emerald-900/30"
@@ -232,7 +232,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate('/company')}
                 className="text-xs text-slate-400 hover:text-white block transition-colors"
               >
-                About Founder Noman Khan
+                About Webtech IT Solution
               </button>
               <button
                 onClick={() => onNavigate('/contact')}
@@ -274,7 +274,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="mt-10 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>© {new Date().getFullYear()} Webtech IT Solution. All rights reserved. Registered in Rohini, Delhi 110085.</p>
           <div className="flex items-center gap-6">
-            <span>Built by Noman Khan</span>
+            <span>Built by Webtech IT Solution</span>
             <span>·</span>
             <span>webtechitsolution.com</span>
             <span>·</span>

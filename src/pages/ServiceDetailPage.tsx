@@ -75,7 +75,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailProps> = ({
                 </button>
 
                 <a
-                  href={getWhatsAppUrl(`Hello Noman Khan, I would like to inquire about your ${service.title} service for my business.`)}
+                  href={getWhatsAppUrl(`Hello Webtech IT Solution, I would like to inquire about your ${service.title} service for my business.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-950"
@@ -193,7 +193,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailProps> = ({
           <div className="bg-gradient-to-r from-blue-950/60 to-slate-900 rounded-2xl p-6 border border-blue-900/40 space-y-3">
             <h4 className="text-sm font-bold text-white">Need an urgent project scope?</h4>
             <p className="text-xs text-slate-300">
-              Speak directly with founder Noman Khan on the official agency phone line.
+              Speak directly with Webtech IT Solution on the official agency phone line.
             </p>
             <a
               href={getPhoneUrl()}
@@ -247,7 +247,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailProps> = ({
           Ready to kick off {service.title}?
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto">
-          Get a transparent cost estimate, expected timeline, and architecture plan directly from founder Noman Khan.
+          Get a transparent cost estimate, expected timeline, and architecture plan directly from Webtech IT Solution.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <button
@@ -257,7 +257,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailProps> = ({
             Request Free Proposal
           </button>
           <a
-            href={getWhatsAppUrl(`Hi Noman Khan, please share quotation and details for ${service.title}.`)}
+            href={getWhatsAppUrl(`Hi Webtech IT Solution, please share quotation and details for ${service.title}.`)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-emerald-950"

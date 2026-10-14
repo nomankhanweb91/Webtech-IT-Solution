@@ -2,7 +2,7 @@ export const COMPANY_PHONE = '7977117717';
 export const COMPANY_WHATSAPP = '9594319442';
 export const COMPANY_EMAIL = 'nomankhanweb@gmail.com';
 export const COMPANY_ADDRESS = 'Mangolpur Kalan, Rohini, Delhi 110085';
-export const COMPANY_FOUNDER = 'Noman Khan';
+export const COMPANY_FOUNDER = 'Webtech IT Solution';
 export const COMPANY_FOUNDED = '2023';
 
 /**

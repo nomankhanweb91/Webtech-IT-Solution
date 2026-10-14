@@ -130,7 +130,7 @@ export const TechIllustration: React.FC<IllustrationProps> = ({
               agency: <span className="text-emerald-300">&quot;Webtech IT Solution&quot;</span>,
             </p>
             <p className="pl-4 text-slate-300">
-              founder: <span className="text-emerald-300">&quot;Noman Khan&quot;</span>,
+              founder: <span className="text-emerald-300">&quot;Webtech IT Solution&quot;</span>,
             </p>
             <p className="pl-4 text-slate-300">
               established: <span className="text-cyan-300 font-bold">2023</span>,

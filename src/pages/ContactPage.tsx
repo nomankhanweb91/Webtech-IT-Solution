@@ -65,7 +65,7 @@ _Sent from Contact Page on webtechitsolution.com_`;
           <span>DIRECT CONTACT &amp; OFFICE CONSULTATION</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-          Let&apos;s Discuss Your Project with Founder Noman Khan
+          Let&apos;s Discuss Your Project with Webtech IT Solution
         </h1>
         <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
           Reach out via phone, direct WhatsApp, email, or schedule an in-person meeting at our Rohini, Delhi office.
@@ -92,10 +92,10 @@ _Sent from Contact Page on webtechitsolution.com_`;
               </div>
               <h3 className="text-lg font-bold text-white">Inquiry Sent Successfully!</h3>
               <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto">
-                Redirecting your details to founder Noman Khan on WhatsApp (9594319442). If the chat did not open automatically, click the button below:
+                Redirecting your details to Webtech IT Solution on WhatsApp (9594319442). If the chat did not open automatically, click the button below:
               </p>
               <a
-                href={getWhatsAppUrl(`Hi Noman Khan, I just submitted an inquiry on the Webtech IT Solution website.`)}
+                href={getWhatsAppUrl(`Hi Webtech IT Solution, I just submitted an inquiry on the Webtech IT Solution website.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-colors"
@@ -114,7 +114,7 @@ _Sent from Contact Page on webtechitsolution.com_`;
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Noman Khan"
+                    placeholder="e.g. Rahul Sharma"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
@@ -253,7 +253,7 @@ _Sent from Contact Page on webtechitsolution.com_`;
                   <a href={getPhoneUrl()} className="text-white font-mono font-bold hover:text-blue-400 transition-colors">
                     +91 {COMPANY_PHONE}
                   </a>
-                  <p className="text-[11px] text-slate-400">Direct line to Noman Khan</p>
+                  <p className="text-[11px] text-slate-400">Direct line to Webtech IT Solution</p>
                 </div>
               </div>
 

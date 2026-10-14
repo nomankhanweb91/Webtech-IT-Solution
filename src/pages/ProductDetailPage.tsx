@@ -78,7 +78,7 @@ export const ProductDetailPage: React.FC<ProductDetailProps> = ({
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <a
-                  href={getWhatsAppUrl(`Hello Noman Khan, I would like to request a live demo and pricing for ${product.title}.`)}
+                  href={getWhatsAppUrl(`Hello Webtech IT Solution, I would like to request a live demo and pricing for ${product.title}.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-950"
@@ -191,7 +191,7 @@ export const ProductDetailPage: React.FC<ProductDetailProps> = ({
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <a
-            href={getWhatsAppUrl(`Hi Noman Khan, I want to purchase and white-label ${product.title} for my company.`)}
+            href={getWhatsAppUrl(`Hi Webtech IT Solution, I want to purchase and white-label ${product.title} for my company.`)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-emerald-950"

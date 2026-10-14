@@ -8,7 +8,7 @@ export const testimonialsData: TestimonialItem[] = [
     company: 'Sign Mumbai',
     project: 'B2B Enterprise Portal & RFQ Engine',
     rating: 5,
-    content: 'Webtech IT Solution and Noman Khan delivered an exceptional digital platform for Sign Mumbai. Our inbound corporate signage inquiries tripled within three months. The WhatsApp quotation integration has streamlined our sales team response time dramatically.',
+    content: 'Webtech IT Solution delivered an exceptional digital platform for Sign Mumbai. Our inbound corporate signage inquiries tripled within three months. The WhatsApp quotation integration has streamlined our sales team response time dramatically.',
   },
   {
     id: 'test-2',
@@ -17,7 +17,7 @@ export const testimonialsData: TestimonialItem[] = [
     company: 'Dsign Interior',
     project: 'Architectural Portfolio & Booking Suite',
     rating: 5,
-    content: 'The attention to design precision, typography, and speed is unmatched. Our architectural clients love the fluidity of our portfolio website. Noman Khan personally ensured our website achieved 95+ PageSpeed scores on mobile without compromising high-resolution project photography.',
+    content: 'The attention to design precision, typography, and speed is unmatched. Our architectural clients love the fluidity of our portfolio website. Webtech IT Solution personally ensured our website achieved 95+ PageSpeed scores on mobile without compromising high-resolution project photography.',
   },
   {
     id: 'test-3',

@@ -88,7 +88,7 @@ _Inquiry via webtechitsolution.com lead form_`;
             </div>
             <h3 className="text-xl font-bold text-white">Connecting with WhatsApp...</h3>
             <p className="text-sm text-slate-400 max-w-xs mx-auto">
-              Redirecting you directly to founder Noman Khan on WhatsApp (9594319442).
+              Redirecting you directly to Webtech IT Solution on WhatsApp (9594319442).
             </p>
           </div>
         ) : (
@@ -103,7 +103,7 @@ _Inquiry via webtechitsolution.com lead form_`;
                 Get a Fast Quote &amp; Technical Scope
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                Fill this quick form to instantly chat with founder Noman Khan on WhatsApp.
+                Fill this quick form to instantly chat with Webtech IT Solution on WhatsApp.
               </p>
             </div>
 

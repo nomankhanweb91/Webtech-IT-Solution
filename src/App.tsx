@@ -99,7 +99,7 @@ export default function App() {
   // Dynamic SEO metadata updater on route change
   useEffect(() => {
     let title = 'Webtech IT Solution – Custom Web Development, AI & Software Agency';
-    let description = 'Webtech IT Solution, founded by Noman Khan, provides custom website development, AI solutions, mobile apps, and enterprise software in Delhi, India.';
+    let description = 'Webtech IT Solution provides custom website development, AI solutions, mobile apps, and enterprise software in Delhi, India.';
 
     if (currentPath === '/') {
       title = 'Webtech IT Solution – Custom Web Development, AI & Software Agency';
@@ -112,7 +112,7 @@ export default function App() {
       const s = servicesData.find((item) => item.slug === slug);
       if (s) {
         title = `${s.title} Services – Webtech IT Solution`;
-        description = `${s.tagline} Professional ${s.title} engineered by Noman Khan in Rohini, Delhi.`;
+        description = `${s.tagline} Professional ${s.title} engineered by Webtech IT Solution in Rohini, Delhi.`;
       }
     } else if (currentPath === '/products') {
       title = 'Software Products & Turnkey Applications – Webtech IT Solution';
@@ -138,11 +138,11 @@ export default function App() {
       title = 'Our Work & Case Studies – Live Client Projects | Webtech IT Solution';
       description = 'Explore live client websites and platforms shipped by Webtech IT Solution: Sign Mumbai, Dsign Interior, Blue Cross, Bharat Darshan, and Genz Coin Trading.';
     } else if (currentPath === '/company') {
-      title = 'About Founder Noman Khan & Company Heritage – Webtech IT Solution';
-      description = 'Learn about Webtech IT Solution, founded in 2023 by Noman Khan in Rohini, Delhi. Our engineering philosophy, standards, and agency vision.';
+      title = 'About Webtech IT Solution & Company Heritage';
+      description = 'Learn about Webtech IT Solution, established in 2023 in Rohini, Delhi. Our engineering philosophy, standards, and agency vision.';
     } else if (currentPath === '/contact') {
       title = 'Contact Webtech IT Solution – Rohini, Delhi Office & WhatsApp';
-      description = 'Get in touch with founder Noman Khan on phone 7977117717, WhatsApp 9594319442, or visit our office in Mangolpur Kalan, Rohini, Delhi 110085.';
+      description = 'Get in touch with Webtech IT Solution on phone 7977117717, WhatsApp 9594319442, or visit our office in Mangolpur Kalan, Rohini, Delhi 110085.';
     }
 
     document.title = title;
